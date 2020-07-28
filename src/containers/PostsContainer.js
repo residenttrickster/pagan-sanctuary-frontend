@@ -7,15 +7,18 @@ class PostsContainer extends React.Component {
         return this.props.posts.map(post =>
             <PostCard 
             key={post.id} 
+            id={post.id} 
             title={post.title}
             body={post.body}
-            username={post.user.username}
+            user={post.user.username}
+            updatePost={this.props.updatePost}
+            deletePost={this.props.deletePost}
             />)
     }
 
     render() {
         return (
-            <div><h1>PostsContainer</h1>
+            <div>
             {this.renderPosts()}
             </div>
         )
