@@ -18,7 +18,6 @@ class UsersPage extends React.Component {
     render() {
     return (
     <div>
-    <h1>List of users</h1>
     <UsersContainer users={this.state.users} />
     </div>
     )

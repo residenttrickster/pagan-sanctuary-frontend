@@ -11,9 +11,9 @@ function App() {
     width: '100px',
     padding: '12px',
     margin: '0 6px 6px',
-    background: 'blue',
+    background: 'white',
     textDecoration: 'none',
-    color: 'white',
+    color: 'black',
   }
 
   const Navbar = () =>
@@ -26,7 +26,8 @@ function App() {
         style={link}
         /* add prop for activeStyle */
         activeStyle={{
-          background: 'brown'
+          background: '#996633',
+          color: 'white'
         }}
       >Home</NavLink>
 
@@ -35,7 +36,8 @@ function App() {
         exact
         style={link}
         activeStyle={{
-          background: 'green'
+          background: '#996633',
+          color: 'white'
         }}
       >Blogs</NavLink>
 
@@ -44,7 +46,8 @@ function App() {
       exact
       style={link}
       activeStyle={{
-        background: 'red'
+        background: '#996633',
+          color: 'white'
       }}
       >List of Users</NavLink>
       

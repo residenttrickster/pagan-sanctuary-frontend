@@ -1,5 +1,6 @@
 import React from 'react';
 import PostCard from '../components/PostCard';
+import './PostsContainer.css'
 
 class PostsContainer extends React.Component {
 
@@ -18,8 +19,8 @@ class PostsContainer extends React.Component {
 
     render() {
         return (
-            <div>
-            {this.renderPosts()}
+            <div className="cards">
+                {this.renderPosts()}
             </div>
         )
     }

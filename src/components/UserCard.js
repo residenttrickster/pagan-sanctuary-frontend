@@ -8,8 +8,8 @@ class UserCard extends React.Component {
 
         return (
         <div> 
-        <h3>Username:{username}</h3>
-        <p>About: {bio}</p>
+        <h3>{username}</h3>
+        <i>{bio}</i>
         </div>
         )
     }

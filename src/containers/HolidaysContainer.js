@@ -1,5 +1,6 @@
 import React from 'react';
 import HolidayCard from '../components/HolidayCard';
+import './HolidayContainer.css';
 
 class HolidaysContainer extends React.Component {
 
@@ -42,13 +43,20 @@ class HolidaysContainer extends React.Component {
 
     render() {
         return(
-            <div>
-            <button onClick={this.toggleCard}>Get a random holiday</button>
-            {this.renderHolidayCard()}
+
+            <div className="render">
+            <center> 
+                <button className="myButton" onClick={this.toggleCard}>Get a random holiday</button>
+            </center>
+                <div className="parent">
+                        <div class="flex-container">
+                {this.renderHolidayCard()}
+                    </div>
+                </div>
+                <p>© art by Julia Nikitina</p>
             </div>
         )
     }
 }
 
 export default HolidaysContainer
-

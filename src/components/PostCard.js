@@ -1,4 +1,5 @@
 import React from 'react';
+import './PostCard.css';
 
 class PostCard extends React.Component {
 
@@ -60,16 +61,16 @@ class PostCard extends React.Component {
             return (
             <div> 
             <h3>{title}</h3>
-            By: <p>{user}</p>
+            <i>{user}</i>
             <p>{body}</p>
-            <button onClick={this.toggleForm}>Update</button>
-            <button onClick={this.handleDelete}>Delete</button>
+            <button className="update" onClick={this.toggleForm}>Update</button>
+            <button className="delete" onClick={this.handleDelete}>Delete</button>
             </div>
             )
         } else {
             return <div>
             <form onSubmit={this.handleUpdate}>
-            <label htmlFor="title">Title</label>
+            <label htmlFor="title">Title: </label>
             <input id="title" 
             name="title" 
             type="title" 
@@ -78,13 +79,14 @@ class PostCard extends React.Component {
             />
             <br></br>
             <br></br>
-            <label htmlFor="body">Post</label>
+            <label htmlFor="body">Post: </label>
             <input id="body" 
+            className="text"
             name="body" 
             type="body" 
             value={this.state.body}
             onChange={this.handleOnChange}/>
-            <button>Update story!</button>
+            <button className="update">Update story!</button>
             </form>
             <button onClick={this.toggleForm}>Close update</button>
             </div>

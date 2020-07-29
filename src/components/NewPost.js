@@ -1,4 +1,6 @@
 import React from 'react';
+import Popup from '../components/Popup';  
+import './NewPost.css';
 
 class NewCard extends React.Component {
 
@@ -9,8 +11,15 @@ class NewCard extends React.Component {
             "id": 1,
             "username": "GreenWitch",
             "bio": "At heart we are all powerful, beautiful, and capable of changing the world with our bare hands.\n        ― Dianne Sylvan, The Body Sacred"
-        }
+        },
+        showPopup: false
     }
+
+    togglePopup = () => {  
+        this.setState({  
+            showPopup: !this.state.showPopup  
+    });  
+        } 
 
     handleOnChange = (event) => {
         this.setState({
@@ -46,25 +55,43 @@ class NewCard extends React.Component {
     render() {
         return (
     <div>
-        <form onSubmit={this.handleSubmit}>
-        <label htmlFor="title">Title</label>
-        <input id="title" 
-        name="title" 
-        type="title" 
-        value={this.state.title}
-        onChange={this.handleOnChange}
-        />
-        <br></br>
-        <br></br>
-        <label htmlFor="body">Post</label>
-        <input id="body" 
-        name="body" 
-        type="body" 
-        value={this.state.body}
-        onChange={this.handleOnChange}/>
+    <button className="storyButton" onClick={this.togglePopup.bind(this)}> Tell a story</button>  
 
-        <button>Send story!</button>
-        </form>
+{this.state.showPopup ?  
+<Popup  
+closePopup={this.togglePopup}  
+formSubmit={<form onSubmit={this.handleSubmit}>
+<b><label htmlFor="title">Title:</label></b>
+<br></br>
+<br></br>
+<input id="title" 
+name="title" 
+type="title" 
+size="30"
+value={this.state.title}
+onChange={this.handleOnChange}
+/>
+<br></br>
+<br></br>
+<b><label htmlFor="body">Here goes a story:</label></b>
+<br></br>
+<br></br>
+<input className="text" 
+name="body" 
+type="body" 
+value={this.state.body}
+onChange={this.handleOnChange}/>
+<br></br>
+<br></br>
+<button className="myButton">Send story!</button>
+<br></br>
+<br></br>
+</form> 
+}
+/>
+: 
+null
+} 
     </div>
         )
     }

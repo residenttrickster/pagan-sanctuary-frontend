@@ -53,7 +53,8 @@ class PostsPage extends React.Component {
     render() {
     return (
     <div>
-    <h1>Read Posts</h1>
+    <br></br>
+    <br></br>
     <NewPost addNewPost={this.addNewPost}/>
     <PostsContainer posts={this.state.posts} updatePost={this.updatePost} deletePost={this.deletePost} />
     </div>

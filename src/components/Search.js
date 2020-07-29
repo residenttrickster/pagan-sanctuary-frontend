@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Search extends React.Component {
 
     render() {
@@ -7,7 +8,6 @@ class Search extends React.Component {
             <div>
             <form>
             <label>
-        Find a holiday:
             <input type="text" 
             name="name" 
             placeholder="Find a holiday..."
@@ -23,3 +23,5 @@ class Search extends React.Component {
 }
 
 export default Search
+
+

@@ -1,5 +1,6 @@
 import React from 'react';
 import UserCard from '../components/UserCard';
+import './UsersContainer.css';
 
 class UsersContainer extends React.Component {
 
@@ -14,7 +15,7 @@ class UsersContainer extends React.Component {
 
     render() {
         return (
-            <div><h1>UsersContainer</h1>
+            <div className="users">
             {this.renderUsers()}
             </div>
         )
