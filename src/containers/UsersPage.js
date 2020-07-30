@@ -1,5 +1,6 @@
 import React from 'react';
 import UsersContainer from './UsersContainer';
+import header from './Header.png';
 
 class UsersPage extends React.Component {
 
@@ -18,6 +19,7 @@ class UsersPage extends React.Component {
     render() {
     return (
     <div>
+    <img src={header} alt="header" width="850" height="400" />
     <UsersContainer users={this.state.users} />
     </div>
     )

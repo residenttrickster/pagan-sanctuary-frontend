@@ -1,6 +1,7 @@
 import React from 'react';
 import PostsContainer from './PostsContainer';
 import NewPost from '../components/NewPost';
+import header from './Header.png';
 
 class PostsPage extends React.Component {
 
@@ -55,6 +56,7 @@ class PostsPage extends React.Component {
     <div>
     <br></br>
     <br></br>
+    <img src={header} alt="header" width="850" height="400" />
     <NewPost addNewPost={this.addNewPost}/>
     <PostsContainer posts={this.state.posts} updatePost={this.updatePost} deletePost={this.deletePost} />
     </div>
