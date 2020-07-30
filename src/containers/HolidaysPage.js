@@ -1,6 +1,7 @@
 import React from 'react';
 import HolidaysContainer from './HolidaysContainer';
 import Search from '../components/Search';
+import header from './Header.png';
 
 class HolidaysPage extends React.Component {
 
@@ -26,7 +27,9 @@ class HolidaysPage extends React.Component {
     render() {
         return(
             <div>
-            <h1>PAGAN SANCTUARY</h1>
+            <br></br>
+            <br></br>
+            <img src={header} alt="header" width="850" height="400" />
             <Search searchTerm={this.state.searchTerm} handleOnChange={this.handleOnChange}/>
             <HolidaysContainer searchTerm={this.state.searchTerm} holidays={this.state.holidays}/>
             </div>
