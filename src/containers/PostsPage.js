@@ -10,7 +10,7 @@ class PostsPage extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`http://localhost:3001/posts`)
+        fetch(`http://pagan-sanctuary-backend.herokuapp.com/posts`)
         .then(r => r.json())    
         .then(posts => {
             this.setState({ posts })

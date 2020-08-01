@@ -30,7 +30,7 @@ class NewCard extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault() 
 
-    fetch("http://localhost:3001/posts", {
+    fetch("http://pagan-sanctuary-backend.herokuapp.com/posts", {
     method: "POST",
     headers: {
     "Content-Type": "application/json"

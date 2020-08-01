@@ -9,7 +9,7 @@ class UsersPage extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`http://localhost:3001/users`)
+        fetch(`http://pagan-sanctuary-backend.herokuapp.com/users`)
         .then(r => r.json())    
         .then(users => {
             this.setState({ users })
