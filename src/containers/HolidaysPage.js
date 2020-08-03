@@ -11,7 +11,7 @@ class HolidaysPage extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`http://pagan-sanctuary-backend.herokuapp.com/holidays`)
+        fetch(`https://pagan-sanctuary-api.herokuapp.com/holidays`)
         .then(r => r.json())    
         .then(holidays => {
             this.setState({ holidays })

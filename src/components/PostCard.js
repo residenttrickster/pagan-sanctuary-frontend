@@ -19,7 +19,7 @@ class PostCard extends React.Component {
 
     handleUpdate = (event) => {
         event.preventDefault()
-        fetch(`http://pagan-sanctuary-backend.herokuapp.com/posts/${this.props.id}`, {
+        fetch(`https://pagan-sanctuary-api.herokuapp.com/posts/${this.props.id}`, {
         method: "PATCH",
         headers: {
         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ class PostCard extends React.Component {
     }
 
     handleDelete = () => {
-    fetch(`http://pagan-sanctuary-backend.herokuapp.com/posts/${this.props.id}`, {
+    fetch(`https://pagan-sanctuary-api.herokuapp.com/posts/${this.props.id}`, {
     method: "DELETE",
     })
     this.props.deletePost(this.props.id)
