@@ -6,6 +6,10 @@ Meet Pagan Sanctuary - app that shares info about pagan holidays and other esoth
 
 THE APP IS DEPLOYED: https://pagan-sanctuary.netlify.app/
 
+# DEMO
+
+https://youtu.be/iybafY6AiY0
+
 Header © Elvira Brodskaya
 
 Holiday cards © Julia Nikitina (https://www.deviantart.com/julianikitina/art/Wheel-of-the-Year-579288057)
